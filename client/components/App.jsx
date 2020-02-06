@@ -13,7 +13,7 @@ class App extends React.Component{
       <Router>
         <React.Fragment>
           {/* Components go here */}
-          <h1>ScapeGoat</h1>
+          <h1 className='header'>ScapeGoat</h1>
           <Route exact path= '/' component={Home} />
           <Route path='/goat' component={Goats}/>
           <Route path='/win' component={Win} />
