@@ -1,11 +1,10 @@
 import React from 'react'
 import {HashRouter as Router, Route} from 'react-router-dom'
 
-
+import Goats from './Goats'
 import Home from './Home'
 import Win from './Win'
 import Lose from './Lose'
-
 
 class App extends React.Component{
   
@@ -13,6 +12,8 @@ class App extends React.Component{
     return (
       <Router>
         <React.Fragment>
+          {/* Components go here */}
+          <Route path='/goat' component={Goats}/>
           <h1>ScapeGoat</h1>
           <Route exact path= '/' component={Home} />
 
