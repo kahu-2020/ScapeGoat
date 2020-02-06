@@ -9,7 +9,7 @@ class Goats extends React.Component{
     super(props)
 
     this.state = {
-
+        goatUrl: ''
     }
   }
 
@@ -25,10 +25,9 @@ class Goats extends React.Component{
 
         <React.Fragment>
             <img className='images' src="http://placegoat.com/400/400" /> 
-
-            <div className='btn'></div>
+            <div className='btn' onClick={this.state.weapon}>Click me</div>
             <img className='images'src={weapon.image} alt="img"/>
-            <div className='weapon'>
+            <div className='info'>
                 <ul>
                     <p>{weapon.name}</p>
                     <p>{weapon.description}</p>
