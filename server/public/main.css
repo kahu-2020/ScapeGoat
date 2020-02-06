@@ -34,3 +34,14 @@ body {
     width: 25pc;
     padding: 4pc 4pc ;
 }
+
+.info {
+    padding: 3pc 5pc 0pc 0pc;
+    font-size: 5pc;
+}
+
+.nelson {
+    height: 25pc;
+    width: 25pc;
+    display: flex;
+}
