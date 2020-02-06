@@ -10,7 +10,6 @@ class Goats extends React.Component{
         goatArr: [],
         goatUrl: ''
     }
-
   }
   
 
