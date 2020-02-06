@@ -7,7 +7,7 @@ class Home extends React.Component {
     render() {
       return (
         <div> 
-            <Link to={'/Goats'}><button className='btn btn-warning' >Fight!</button></Link>
+            <Link to={'/goat'}><button className='btn btn-warning' >Fight!</button></Link>
         </div> 
         )
     }
