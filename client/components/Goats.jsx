@@ -1,39 +1,40 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { getGoat } from '../api/api'
 import data from '../../data'
 
 
-class Goats extends React.Component{
-  constructor(props){
-    super(props)
+class Goats extends React.Component {
+    constructor(props) {
+        super(props)
 
-    this.state = {
-        goatUrl: ''
+        this.state = {
+            goatUrl: ''
+        }
     }
-  }
 
-  componentDidMount() {
+    componentDidMount() {
 
-  }
+    }
 
-  render() {
+    render() {
 
-    const weapon = data[Math.ceil(Math.random()* data.length)]
+        const weapon = data[Math.ceil(Math.random() * data.length)]
 
-    return (
-
-            <div className='container'>
-                <div className='info'>
-                    <p>{weapon.name}</p>
-                    <p>{weapon.description}</p>
+        return (
+            <div>
+                <div className='container'>
+                    <div className='info'>
+                        <h1>{weapon.name}</h1>
+                        <p>{weapon.description}</p>
+                    </div>
+                    <img className='images' src={weapon.image} alt="img" />
+                    <img className='images' src="http://placegoat.com/400/400" />
                 </div>
-                <img className='images'src={weapon.image} alt="img"/>
-                <img className='images' src="http://placegoat.com/400/400" /> 
-
+                <Link to={'/lose'}><button className='btn btn-warning' >Fight!</button></Link>
             </div>
-    )
-  }
+        )
+    }
 }
 
 export default Goats
