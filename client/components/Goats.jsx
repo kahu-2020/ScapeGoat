@@ -1,44 +1,37 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import { getGoat } from '../api/api'
+import data from '../../data'
+
 
 class Goats extends React.Component{
   constructor(props){
     super(props)
 
     this.state = {
-        goatArr: [],
         goatUrl: ''
     }
   }
-  
 
   componentDidMount() {
-    // fetch("http://placegoat.com/200/200")
-    getGoat()
-   
-    .then(image => {
-         
-        const goats = image.data
 
-        console.log(image.data)
-        this.setState({
-            goatArr: goats 
-        }) 
-    })
-  
   }
 
-
   render() {
+
+    const weapon = data[Math.ceil(Math.random()* data.length)]
+
     return (
 
+            <div className='container'>
+                <div className='info'>
+                    <p>{weapon.name}</p>
+                    <p>{weapon.description}</p>
+                </div>
+                <img className='images'src={weapon.image} alt="img"/>
+                <img className='images' src="http://placegoat.com/400/400" /> 
 
-        <React.Fragment>
-            <img className='goatImg' src="http://placegoat.com/200/200" />
-            <div>Goat</div>
-        </React.Fragment>
-     
+            </div>
     )
   }
 }
