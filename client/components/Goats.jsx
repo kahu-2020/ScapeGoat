@@ -31,7 +31,7 @@ class Goats extends React.Component {
                     <img className='images' src={weapon.image} alt="img" />
                     <img className='images' src="http://placegoat.com/400/400" />
                 </div>
-                <Link to={'/lose'}><button className='btn btn-warning' >Fight!</button></Link>
+                <Link to={'/win'}><button className='btn btn-warning' >Fight!</button></Link>
             </div>
         )
     }
