@@ -14,8 +14,7 @@
     "dev": "run-p dev:client dev:server",
     "dev:client": "webpack --watch",
     "dev:server": "nodemon server",
-    "start": "run-s build server",
-    "build": "webpack",
+    "start": "node server",
     "server": "node server",
     "test": "jest --watchAll"
   },
